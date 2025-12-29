@@ -1,0 +1,108 @@
+{
+  "name": "@zos-apps/my-app",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "screenshots"
+  ],
+  "zos": {
+    "id": "com.example.my-app",
+    "name": "My App",
+    "icon": "🚀",
+    "category": "utilities",
+    "description": "A zOS application template",
+    "permissions": [],
+    "window": {
+      "defaultSize": {
+        "width": 800,
+        "height": 600
+      },
+      "minSize": {
+        "width": 400,
+        "height": 300
+      },
+      "resizable": true
+    },
+    "about": "A template for creating zOS applications.",
+    "help": [
+      "Use this template to create your own zOS app",
+      "Customize the package.json zos field",
+      "Replace the component in src/index.tsx"
+    ],
+    "docs": "https://zos-apps.github.io/app-template",
+    "site": "https://github.com/zos-apps/app-template",
+    "shortcuts": [
+      "Cmd+N New",
+      "Cmd+S Save",
+      "Cmd+W Close"
+    ],
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3"
+    ],
+    "screenshots": {
+      "hero": "screenshots/hero.png",
+      "images": []
+    },
+    "downloads": {
+      "web": "https://zos-apps.github.io/app-template"
+    },
+    "featured": false,
+    "tags": [
+      "template",
+      "starter"
+    ],
+    "releaseDate": "2024-12-29",
+    "support": "https://github.com/zos-apps/app-template/issues",
+    "changelog": "https://github.com/zos-apps/app-template/releases"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "description": "A zOS application template",
+  "homepage": "https://zos-apps.github.io/app-template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zos-apps/app-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zos-apps/app-template/issues"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "keywords": [
+    "zos",
+    "app",
+    "template",
+    "macos",
+    "desktop"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

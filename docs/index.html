@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zOS App Template</title>
+    <meta name="description" content="A template for creating zOS applications">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        
+        .feature h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature p {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .quickstart {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .quickstart h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .code {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+        }
+        
+        .code .comment {
+            color: #6a9955;
+        }
+        
+        .code .command {
+            color: #dcdcaa;
+        }
+        
+        footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="icon">🚀</div>
+            <h1>zOS App Template</h1>
+            <p class="subtitle">Create beautiful zOS applications in minutes</p>
+            <div class="buttons">
+                <a href="https://github.com/zos-apps/app-template/generate" class="btn btn-primary">
+                    Use This Template
+                </a>
+                <a href="https://github.com/zos-apps/app-template" class="btn btn-secondary">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>⚡ Quick Start</h3>
+                <p>Clone, customize, and deploy your app in minutes</p>
+            </div>
+            <div class="feature">
+                <h3>📦 TypeScript Ready</h3>
+                <p>Full TypeScript support with types included</p>
+            </div>
+            <div class="feature">
+                <h3>🔧 CI/CD Included</h3>
+                <p>GitHub Actions for build, test, and publish</p>
+            </div>
+            <div class="feature">
+                <h3>🏪 App Store Ready</h3>
+                <p>Automatically integrates with the zOS App Store</p>
+            </div>
+        </div>
+        
+        <div class="quickstart">
+            <h2>Quick Start</h2>
+            <div class="code">
+                <span class="comment"># Clone the template</span><br>
+                <span class="command">gh repo create my-app --template zos-apps/app-template</span><br><br>
+                <span class="comment"># Install dependencies</span><br>
+                <span class="command">cd my-app && npm install</span><br><br>
+                <span class="comment"># Start development</span><br>
+                <span class="command">npm run dev</span><br><br>
+                <span class="comment"># Build for production</span><br>
+                <span class="command">npm run build</span>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Built with ❤️ by <a href="https://github.com/zos-apps">zOS Apps</a></p>
+        </footer>
+    </div>
+</body>
+</html>
