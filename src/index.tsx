@@ -13,7 +13,7 @@
  * ```
  */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export interface MyAppProps {
   /** Initial message to display */
